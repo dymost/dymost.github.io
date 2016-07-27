@@ -34,7 +34,7 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 
 
 最新">
-<meta property="og:updated_time" content="2016-07-27T09:43:40.000Z">
+<meta property="og:updated_time" content="2016-07-27T09:47:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac使用hexo，github搭建个人博客">
 <meta name="twitter:description" content="使用hexo建立静态博客Hexo是一个快速、简洁、高效的基于Node.js博客框架。并且使用MarkDown语法解析文章。
@@ -285,8 +285,8 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 </li>
 <li><p>sudo 暂时将你权限提升至root权限 然后你就可以操作某些文件的读和写，10.11的保护机制 mac权限机制自行百度</p>
 </li>
-<li>正确方法：</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
+<li><p>正确方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -295,6 +295,14 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 <li>hexo <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官网地址</a></li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<ul>
+<li>可能会出现错误，原因是 我国防火墙网络墙的问题，导致安装的时候少装了几个库。 解决方法，换一个源重新装:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo --no-optional</div></pre></td></tr></table></figure>
+<ul>
+<li>hexo 下载完成后 运行一下 看是否安装成功</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
 <h2 id="hexo配置文件浅析"><a href="#hexo配置文件浅析" class="headerlink" title="hexo配置文件浅析"></a>hexo配置文件浅析</h2><p>修改全局配置文件</p>
 <p>此段落引用自Hexo官方文档</p>
 <p>您可以在 _config.yml 中修改大部份的配置。</p>
