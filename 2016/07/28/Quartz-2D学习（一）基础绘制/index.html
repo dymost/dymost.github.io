@@ -4,17 +4,39 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives | 追风汉子</title>
+  <title>Quartz 2D学习（一）基础绘制 | 追风汉子</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="dymost‘s blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="追风汉子">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="画一个基本图形步骤
+
+获取图形上下文
+CGContextRef ctr = UIGraphicsGetCurrentContext();
+
+划线，利用线组成图形
+// 创建线CGMutablePathRef path = CGPathCreateMutable();
+CGPathMoveToPoint(path, NULL, 50, 50);CGPathAddLineToPoint(path, N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quartz 2D学习（一）基础绘制">
+<meta property="og:url" content="http://yoursite.com/2016/07/28/Quartz-2D学习（一）基础绘制/index.html">
 <meta property="og:site_name" content="追风汉子">
-<meta property="og:description" content="dymost‘s blog">
+<meta property="og:description" content="画一个基本图形步骤
+
+获取图形上下文
+CGContextRef ctr = UIGraphicsGetCurrentContext();
+
+划线，利用线组成图形
+// 创建线CGMutablePathRef path = CGPathCreateMutable();
+CGPathMoveToPoint(path, NULL, 50, 50);CGPathAddLineToPoint(path, N">
+<meta property="og:updated_time" content="2016-07-28T08:10:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="追风汉子">
-<meta name="twitter:description" content="dymost‘s blog">
+<meta name="twitter:title" content="Quartz 2D学习（一）基础绘制">
+<meta name="twitter:description" content="画一个基本图形步骤
+
+获取图形上下文
+CGContextRef ctr = UIGraphicsGetCurrentContext();
+
+划线，利用线组成图形
+// 创建线CGMutablePathRef path = CGPathCreateMutable();
+CGPathMoveToPoint(path, NULL, 50, 50);CGPathAddLineToPoint(path, N">
   
     <link rel="alternative" href="/atom.xml" title="追风汉子" type="application/atom+xml">
   
@@ -192,92 +214,129 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Quartz-2D学习（一）基础绘制" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/28/Quartz-2D学习（一）基础绘制/" class="archive-article-date">
-  	<time datetime="2016-07-28T08:05:44.000Z" itemprop="datePublished">Jul 28</time>
+    <div class="article-meta">
+      <a href="/2016/07/28/Quartz-2D学习（一）基础绘制/" class="article-date">
+  	<time datetime="2016-07-28T08:05:44.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/28/Quartz-2D学习（一）基础绘制/">Quartz 2D学习（一）基础绘制</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Quartz 2D学习（一）基础绘制
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动画、Quartz-2D/">动画、Quartz 2D</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/动画/">动画</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>画一个基本图形步骤</p>
+<ol>
+<li><p>获取图形上下文</p>
+<p>CGContextRef ctr = UIGraphicsGetCurrentContext();</p>
+</li>
+<li><p>划线，利用线组成图形</p>
+<p>// 创建线<br>CGMutablePathRef path = CGPathCreateMutable();</p>
+<p>CGPathMoveToPoint(path, NULL, 50, 50);<br>CGPathAddLineToPoint(path, NULL, 100, 50);<br>CGPathAddLineToPoint(path, NULL, 100, 100);<br>CGPathAddLineToPoint(path, NULL, 100, 100);</p>
+</li>
+<li><p>设置线的样式，图形的样式</p>
+<p> // 线宽<br> CGContextSetLineWidth(ctr, 20);</p>
+<p> // 设置连接样式<br> CGContextSetLineJoin(ctr, kCGLineJoinRound);</p>
+<p> // 设置顶角样式<br> CGContextSetLineCap(ctr, kCGLineCapRound);</p>
+<p> // 设置填充颜色<br> CGContextSetFillColorWithColor(ctr, [[UIColor blueColor] CGColor]);<br> // 设置线的颜色<br> CGContextSetStrokeColorWithColor(ctr, [[UIColor redColor] CGColor]);// 设置线的颜色</p>
+</li>
+</ol>
+<ol>
+<li><p>将路径添加到上下文</p>
+<p> CGContextAddPath(ctr, path);<br>CGContext方式默认添加了路径</p>
+</li>
+<li><p>渲染上下文，将画的东西显示出来</p>
+<p> strock ：画线<br> fill：填充<br> CGContextStrokePath(ctr); //画线<br> CGContextFillPath(ctr); //填充<br> CGContextSetFillColorWithColor(ctr, [[UIColor blueColor] CGColor]);// 设置填充颜色<br> CGContextSetStrokeColorWithColor(ctr, [[UIColor redColor] CGColor]);// 设置线的颜色<br> 同时设置线的样式和内容样式只能用CGContextDrawPath(ctr, CGPathDrawingMode);<br> typedef CF_ENUM (int32_t, CGPathDrawingMode) {</p>
+<pre><code>kCGPathFill, // 填充
+kCGPathEOFill,
+kCGPathStroke,// 画线
+kCGPathFillStroke,// 画线和填充
+kCGPathEOFillStroke
+</code></pre><p> };</p>
+<p>画一个正方形 用CGContextXX画一个正方形</p>
+</li>
+</ol>
+<ul>
+<li><p>(void)drawRect:(CGRect)rect {<br>// 1.获取图形上下文<br>CGContextRef ctr = UIGraphicsGetCurrentContext();<br>CGContextMoveToPoint(ctr, 50, 50);<br>CGContextAddLineToPoint(ctr, 100, 50);<br>CGContextAddLineToPoint(ctr, 100, 100);<br>CGContextAddLineToPoint(ctr, 50, 100);<br>CGContextAddLineToPoint(ctr, 50, 50);</p>
+<p>//    CGContextStrokePath(ctr);<br>CGContextSetLineWidth(ctr, 10);<br>//    CGContextStrokePath(ctr);<br>CGContextSetFillColorWithColor(ctr, [[UIColor blueColor] CGColor]);<br>//    [[UIColor redColor] setFill];<br>CGContextSetStrokeColorWithColor(ctr, [[UIColor redColor] CGColor]);<br>//    CGContextFillPath(ctr);<br>CGContextDrawPath(ctr, kCGPathEOFillStroke);//设置画图样式，划线，还是填充，还是既划线也填充<br>}</p>
+</li>
+</ul>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/27/使用hexo，github搭建个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">mac使用hexo，github搭建个人博客</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/27/使用hexo，github搭建个人博客/" class="archive-article-date">
-  	<time datetime="2016-07-27T06:14:27.000Z" itemprop="datePublished">Jul 27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/27/使用hexo，github搭建个人博客/">mac使用hexo，github搭建个人博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/杂记/">杂记</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Quartz-2D学习（一）基础绘制" data-title="Quartz 2D学习（一）基础绘制" data-url="http://yoursite.com/2016/07/28/Quartz-2D学习（一）基础绘制/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -303,8 +362,8 @@
 		mathjax: true,
 		animate: undefined,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: undefined

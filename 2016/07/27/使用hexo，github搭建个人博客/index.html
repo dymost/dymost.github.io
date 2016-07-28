@@ -10,10 +10,10 @@
 环境配置
 安装Node.js 官网地址,直接下载安装
 检测安装是否成功 命令行
+
 1$ node -v
 
 下载 安装 homebrew 官方网址
-
 homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。
 
 
@@ -26,25 +26,25 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 环境配置
 安装Node.js 官网地址,直接下载安装
 检测安装是否成功 命令行
+
 1$ node -v
 
 下载 安装 homebrew 官方网址
-
 homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。
 
 
 最新">
-<meta property="og:updated_time" content="2016-07-27T09:47:27.000Z">
+<meta property="og:updated_time" content="2016-07-27T10:04:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac使用hexo，github搭建个人博客">
 <meta name="twitter:description" content="使用hexo建立静态博客Hexo是一个快速、简洁、高效的基于Node.js博客框架。并且使用MarkDown语法解析文章。
 环境配置
 安装Node.js 官网地址,直接下载安装
 检测安装是否成功 命令行
+
 1$ node -v
 
 下载 安装 homebrew 官方网址
-
 homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。
 
 
@@ -146,7 +146,7 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/blog/" style="font-size: 10px;">blog</a>
+						<a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/动画、Quartz-2D/" style="font-size: 10px;">动画、Quartz 2D</a>
 					</div>
 				</section>
 				
@@ -271,17 +271,17 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 <h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ul>
 <li>安装Node.js <a href="https://nodejs.org/en/" target="_blank" rel="external">官网地址</a>,直接下载安装</li>
 <li>检测安装是否成功 命令行</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure>
-</li>
-<li><p>下载 安装 homebrew <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">官方网址</a></p>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure>
 <ul>
+<li>下载 安装 homebrew <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">官方网址</a><ul>
 <li>homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。</li>
 </ul>
 </li>
 <li><p>最新系统的读者注意：命令行安装出现失败，多数是由权限引起，在命令前加 sudo </p>
 <ul>
-<li>例如：10.11系统的用户使用homebrew提供的安装方法 会出现失败提示</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</div></pre></td></tr></table></figure>
+<li><p>例如：10.11系统的用户使用homebrew提供的安装方法 会出现失败提示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</div></pre></td></tr></table></figure>
 </li>
 <li><p>sudo 暂时将你权限提升至root权限 然后你就可以操作某些文件的读和写，10.11的保护机制 mac权限机制自行百度</p>
 </li>
@@ -292,7 +292,7 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 </li>
 </ul>
 <h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><ul>
-<li>hexo <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官网地址</a></li>
+<li>hexo <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官网地址</a>,根据提示安装hexo</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
 <ul>
@@ -303,26 +303,63 @@ homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的�
 <li>hexo 下载完成后 运行一下 看是否安装成功</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
-<h2 id="hexo配置文件浅析"><a href="#hexo配置文件浅析" class="headerlink" title="hexo配置文件浅析"></a>hexo配置文件浅析</h2><p>修改全局配置文件</p>
-<p>此段落引用自Hexo官方文档</p>
-<p>您可以在 _config.yml 中修改大部份的配置。</p>
-<p>网站<br>参数    描述<br>title    网站标题<br>subtitle    网站副标题<br>description    网站描述<br>author    您的名字<br>language    网站使用的语言<br>timezone    网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。<br>网址<br>参数    描述    默认值<br>url    网址<br>root    网站根目录<br>permalink    文章的 永久链接 格式    :year/:month/:day/:title/<br>permalink_default    永久链接中各部分的默认值<br>如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，则请将您的">http://yoursite.com/blog，则请将您的</a> url 设为 <a href="http://yoursite.com/blog">http://yoursite.com/blog</a> 并把 root 设为 /blog/。<br>目录<br>参数    描述    默认值<br>source_dir    资源文件夹，这个文件夹用来存放内容。    source<br>public_dir    公共文件夹，这个文件夹用于存放生成的站点文件。    public<br>tag_dir    标签文件夹    tags<br>archive_dir    归档文件夹    archives<br>category_dir    分类文件夹    categories<br>code_dir    Include code 文件夹    `downloads/code<br>i18n_dir    国际化（i18n）文件夹    :lang<br>skip_render    跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。<br>文章<br>参数    描述    默认值<br>new_post_name    新文章的文件名称    :title.md<br>default_layout    预设布局    post<br>auto_spacing    在中文和英文之间加入空格    false<br>titlecase    把标题转换为 title case    false<br>external_link    在新标签中打开链接    true<br>filename_case    把文件名称转换为 (1) 小写或 (2) 大写    0<br>render_drafts    显示草稿    false<br>post_asset_folder    启动 Asset 文件夹    false<br>relative_link    把链接改为与根目录的相对位址    false<br>future    显示未来的文章    true<br>highlight    代码块的设置<br>分类 &amp; 标签<br>参数    描述    默认值<br>default_category    默认分类    uncategorized<br>category_map    分类别名<br>tag_map    标签别名<br>日期 / 时间格式<br>Hexo 使用 Moment.js 来解析和显示时间。</p>
-<p>参数    描述    默认值<br>date_format    日期格式    MMM D YYYY<br>time_format    时间格式    H:mm:ss<br>分页<br>参数    描述    默认值<br>per_page    每页显示的文章量 (0 = 关闭分页功能)    10<br>pagination_dir    分页目录    page<br>扩展<br>参数    描述<br>theme    当前主题名称。值为false时禁用主题<br>deploy    部署部分的设置</p>
-<p>##使用github中gitpage搭建网络博客</p>
-<p>##将hexo生成的静态博客和gitpage博客关联</p>
-<h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><ul>
+<h3 id="建立本地站点"><a href="#建立本地站点" class="headerlink" title="建立本地站点"></a>建立本地站点</h3><ul>
+<li>初始化博客站点</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cd 你准备把博客放进去的文件夹 # 如/user/blog/hexo</div><div class="line">$ hexo init #初始化hexo</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<ul>
+<li>新建完成后，指定文件夹的目录如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+<ul>
+<li>生成静态博客页面</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<ul>
+<li>启动博客站点</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd 博客文件夹 #如果你没出去的话就不用写，你还在hexo文件夹下</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<ul>
+<li>浏览器输入<a href="http://localhost:4000，进入博客站点" target="_blank" rel="external">http://localhost:4000，进入博客站点</a></li>
+<li>创建新文章</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;博客名称&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li>这个新文章会在~/source/_posts文件夹下，打开可以编辑，<em>注意使用MarkDown语法</em></li>
+<li>再重复以下操作</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean #清除之前博客记录</div><div class="line">$ hexo generate #重新生成静态页面</div><div class="line">$ hexo server #启动博客</div></pre></td></tr></table></figure>
+<h2 id="使用github中gitpage搭建网络博客"><a href="#使用github中gitpage搭建网络博客" class="headerlink" title="使用github中gitpage搭建网络博客"></a>使用github中gitpage搭建网络博客</h2><h2 id="将hexo生成的静态博客和gitpage博客关联"><a href="#将hexo生成的静态博客和gitpage博客关联" class="headerlink" title="将hexo生成的静态博客和gitpage博客关联"></a>将hexo生成的静态博客和gitpage博客关联</h2><h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><ul>
 <li>哈哈哈哈</li>
 <li>好好</li>
 <li>为什么</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">pinrt &quot;hello world&quot;</div><div class="line"></div><div class="line">aabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaabaab</div><div class="line">aab</div><div class="line">aab</div><div class="line">aab</div><div class="line">aab</div></pre></td></tr></table></figure>
-<h2 id="使用自定义域名"><a href="#使用自定义域名" class="headerlink" title="使用自定义域名"></a>使用自定义域名</h2>
+<h2 id="使用自定义域名"><a href="#使用自定义域名" class="headerlink" title="使用自定义域名"></a>使用自定义域名</h2><h2 id="hexo配置文件浅析"><a href="#hexo配置文件浅析" class="headerlink" title="hexo配置文件浅析"></a>hexo配置文件浅析</h2><p>修改全局配置文件</p>
+<p>此段落引用自Hexo官方文档</p>
+<p>您可以在 _config.yml 中修改大部份的配置。</p>
+<p>网站<br>参数    描述<br>title    网站标题<br>subtitle    网站副标题<br>description    网站描述<br>author    您的名字<br>language    网站使用的语言<br>timezone    网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。<br>网址<br>参数    描述    默认值<br>url    网址<br>root    网站根目录<br>permalink    文章的 永久链接 格式    :year/:month/:day/:title/<br>permalink_default    永久链接中各部分的默认值<br>如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，则请将您的">http://yoursite.com/blog，则请将您的</a> url 设为 <a href="http://yoursite.com/blog">http://yoursite.com/blog</a> 并把 root 设为 /blog/。<br>目录<br>参数    描述    默认值<br>source_dir    资源文件夹，这个文件夹用来存放内容。    source<br>public_dir    公共文件夹，这个文件夹用于存放生成的站点文件。    public<br>tag_dir    标签文件夹    tags<br>archive_dir    归档文件夹    archives<br>category_dir    分类文件夹    categories<br>code_dir    Include code 文件夹    `downloads/code<br>i18n_dir    国际化（i18n）文件夹    :lang<br>skip_render    跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。<br>文章<br>参数    描述    默认值<br>new_post_name    新文章的文件名称    :title.md<br>default_layout    预设布局    post<br>auto_spacing    在中文和英文之间加入空格    false<br>titlecase    把标题转换为 title case    false<br>external_link    在新标签中打开链接    true<br>filename_case    把文件名称转换为 (1) 小写或 (2) 大写    0<br>render_drafts    显示草稿    false<br>post_asset_folder    启动 Asset 文件夹    false<br>relative_link    把链接改为与根目录的相对位址    false<br>future    显示未来的文章    true<br>highlight    代码块的设置<br>分类 &amp; 标签<br>参数    描述    默认值<br>default_category    默认分类    uncategorized<br>category_map    分类别名<br>tag_map    标签别名<br>日期 / 时间格式<br>Hexo 使用 Moment.js 来解析和显示时间。</p>
+<p>参数    描述    默认值<br>date_format    日期格式    MMM D YYYY<br>time_format    时间格式    H:mm:ss<br>分页<br>参数    描述    默认值<br>per_page    每页显示的文章量 (0 = 关闭分页功能)    10<br>pagination_dir    分页目录    page<br>扩展<br>参数    描述<br>theme    当前主题名称。值为false时禁用主题<br>deploy    部署部分的设置</p>
+
       
     </div>
     
   </div>
   
     
+<nav id="article-nav">
+  
+    <a href="/2016/07/28/Quartz-2D学习（一）基础绘制/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Quartz 2D学习（一）基础绘制
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
   
 </article>
 
