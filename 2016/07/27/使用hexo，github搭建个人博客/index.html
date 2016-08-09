@@ -1,0 +1,747 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="blog," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="使用hexo建立静态博客Hexo是一个快速、简洁、高效的基于Node.js博客框架。并且使用MarkDown语法解析文章。
+环境配置
+安装Node.js 官网地址,直接下载安装
+检测安装是否成功 命令行
+
+1$ node -v
+
+下载 安装 homebrew 官方网址
+homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。
+
+
+最新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac使用hexo，github搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2016/07/27/使用hexo，github搭建个人博客/index.html">
+<meta property="og:site_name" content="追风的汉子">
+<meta property="og:description" content="使用hexo建立静态博客Hexo是一个快速、简洁、高效的基于Node.js博客框架。并且使用MarkDown语法解析文章。
+环境配置
+安装Node.js 官网地址,直接下载安装
+检测安装是否成功 命令行
+
+1$ node -v
+
+下载 安装 homebrew 官方网址
+homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。
+
+
+最新">
+<meta property="og:updated_time" content="2016-07-27T10:04:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mac使用hexo，github搭建个人博客">
+<meta name="twitter:description" content="使用hexo建立静态博客Hexo是一个快速、简洁、高效的基于Node.js博客框架。并且使用MarkDown语法解析文章。
+环境配置
+安装Node.js 官网地址,直接下载安装
+检测安装是否成功 命令行
+
+1$ node -v
+
+下载 安装 homebrew 官方网址
+homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。
+
+
+最新">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/27/使用hexo，github搭建个人博客/"/>
+
+  <title> mac使用hexo，github搭建个人博客 | 追风的汉子 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?f462f6ba1f23dd810ffc7ca4e58a0397";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">追风的汉子</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">iOS / 数据分析</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-ios">
+          <a href="/iOS" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-apple"></i> <br />
+            
+            iOS
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                mac使用hexo，github搭建个人博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-27T14:14:27+08:00" content="2016-07-27">
+              2016-07-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/杂记/" itemprop="url" rel="index">
+                    <span itemprop="name">杂记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/27/使用hexo，github搭建个人博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/27/使用hexo，github搭建个人博客/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="使用hexo建立静态博客"><a href="#使用hexo建立静态博客" class="headerlink" title="使用hexo建立静态博客"></a>使用hexo建立静态博客</h2><p>Hexo是一个快速、简洁、高效的基于Node.js博客框架。并且使用MarkDown语法解析文章。</p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><ul>
+<li>安装Node.js <a href="https://nodejs.org/en/" target="_blank" rel="external">官网地址</a>,直接下载安装</li>
+<li>检测安装是否成功 命令行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure>
+<ul>
+<li>下载 安装 homebrew <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">官方网址</a><ul>
+<li>homebrew 是MAC OSX 上面用来安装 或者 卸载软件用的非常方面的一个软件，我们下面安装 hexo 全靠它。</li>
+</ul>
+</li>
+<li><p>最新系统的读者注意：命令行安装出现失败，多数是由权限引起，在命令前加 sudo </p>
+<ul>
+<li><p>例如：10.11系统的用户使用homebrew提供的安装方法 会出现失败提示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</div></pre></td></tr></table></figure>
+</li>
+<li><p>sudo 暂时将你权限提升至root权限 然后你就可以操作某些文件的读和写，10.11的保护机制 mac权限机制自行百度</p>
+</li>
+<li><p>正确方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><ul>
+<li>hexo <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">官网地址</a>,根据提示安装hexo</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<ul>
+<li>可能会出现错误，原因是 我国防火墙网络墙的问题，导致安装的时候少装了几个库。 解决方法，换一个源重新装:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo --no-optional</div></pre></td></tr></table></figure>
+<ul>
+<li>hexo 下载完成后 运行一下 看是否安装成功</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
+<h3 id="建立本地站点"><a href="#建立本地站点" class="headerlink" title="建立本地站点"></a>建立本地站点</h3><ul>
+<li>初始化博客站点</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ cd 你准备把博客放进去的文件夹 # 如/user/blog/hexo</div><div class="line">$ hexo init #初始化hexo</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<ul>
+<li>新建完成后，指定文件夹的目录如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── scripts</div><div class="line">├── source</div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+<ul>
+<li>生成静态博客页面</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<ul>
+<li>启动博客站点</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd 博客文件夹 #如果你没出去的话就不用写，你还在hexo文件夹下</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<ul>
+<li>浏览器输入<a href="http://localhost:4000，进入博客站点" target="_blank" rel="external">http://localhost:4000，进入博客站点</a></li>
+<li>创建新文章</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;博客名称&quot;</div></pre></td></tr></table></figure>
+<ul>
+<li>这个新文章会在~/source/_posts文件夹下，打开可以编辑，<em>注意使用MarkDown语法</em></li>
+<li>再重复以下操作</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean #清除之前博客记录</div><div class="line">$ hexo generate #重新生成静态页面</div><div class="line">$ hexo server #启动博客</div></pre></td></tr></table></figure>
+<h2 id="使用github中gitpage搭建网络博客"><a href="#使用github中gitpage搭建网络博客" class="headerlink" title="使用github中gitpage搭建网络博客"></a>使用github中gitpage搭建网络博客</h2><h2 id="将hexo生成的静态博客和gitpage博客关联"><a href="#将hexo生成的静态博客和gitpage博客关联" class="headerlink" title="将hexo生成的静态博客和gitpage博客关联"></a>将hexo生成的静态博客和gitpage博客关联</h2><h2 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h2><ul>
+<li>哈哈哈哈</li>
+<li>好好</li>
+<li>为什么</li>
+</ul>
+<h2 id="使用自定义域名"><a href="#使用自定义域名" class="headerlink" title="使用自定义域名"></a>使用自定义域名</h2><h2 id="hexo配置文件浅析"><a href="#hexo配置文件浅析" class="headerlink" title="hexo配置文件浅析"></a>hexo配置文件浅析</h2><p>修改全局配置文件</p>
+<p>此段落引用自Hexo官方文档</p>
+<p>您可以在 _config.yml 中修改大部份的配置。</p>
+<p>网站<br>参数    描述<br>title    网站标题<br>subtitle    网站副标题<br>description    网站描述<br>author    您的名字<br>language    网站使用的语言<br>timezone    网站时区。Hexo 默认使用您电脑的时区。时区列表。比如说：America/New_York, Japan, 和 UTC 。<br>网址<br>参数    描述    默认值<br>url    网址<br>root    网站根目录<br>permalink    文章的 永久链接 格式    :year/:month/:day/:title/<br>permalink_default    永久链接中各部分的默认值<br>如果您的网站存放在子目录中，例如 <a href="http://yoursite.com/blog，则请将您的">http://yoursite.com/blog，则请将您的</a> url 设为 <a href="http://yoursite.com/blog">http://yoursite.com/blog</a> 并把 root 设为 /blog/。<br>目录<br>参数    描述    默认值<br>source_dir    资源文件夹，这个文件夹用来存放内容。    source<br>public_dir    公共文件夹，这个文件夹用于存放生成的站点文件。    public<br>tag_dir    标签文件夹    tags<br>archive_dir    归档文件夹    archives<br>category_dir    分类文件夹    categories<br>code_dir    Include code 文件夹    `downloads/code<br>i18n_dir    国际化（i18n）文件夹    :lang<br>skip_render    跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。<br>文章<br>参数    描述    默认值<br>new_post_name    新文章的文件名称    :title.md<br>default_layout    预设布局    post<br>auto_spacing    在中文和英文之间加入空格    false<br>titlecase    把标题转换为 title case    false<br>external_link    在新标签中打开链接    true<br>filename_case    把文件名称转换为 (1) 小写或 (2) 大写    0<br>render_drafts    显示草稿    false<br>post_asset_folder    启动 Asset 文件夹    false<br>relative_link    把链接改为与根目录的相对位址    false<br>future    显示未来的文章    true<br>highlight    代码块的设置<br>分类 &amp; 标签<br>参数    描述    默认值<br>default_category    默认分类    uncategorized<br>category_map    分类别名<br>tag_map    标签别名<br>日期 / 时间格式<br>Hexo 使用 Moment.js 来解析和显示时间。</p>
+<p>参数    描述    默认值<br>date_format    日期格式    MMM D YYYY<br>time_format    时间格式    H:mm:ss<br>分页<br>参数    描述    默认值<br>per_page    每页显示的文章量 (0 = 关闭分页功能)    10<br>pagination_dir    分页目录    page<br>扩展<br>参数    描述<br>theme    当前主题名称。值为false时禁用主题<br>deploy    部署部分的设置</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/blog/" rel="tag">#blog</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/28/Quartz-2D学习（一）基础绘制/" rel="prev" title="Quartz 2D学习（一）基础绘制">
+                Quartz 2D学习（一）基础绘制 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/27/使用hexo，github搭建个人博客/"
+           data-title="mac使用hexo，github搭建个人博客" data-url="http://yoursite.com/2016/07/27/使用hexo，github搭建个人博客/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/life.JPG"
+               alt="dymost" />
+          <p class="site-author-name" itemprop="name">dymost</p>
+          <p class="site-description motion-element" itemprop="description">不想当程序员的厨子就不是个好段子手</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用hexo建立静态博客"><span class="nav-number">1.</span> <span class="nav-text">使用hexo建立静态博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立本地站点"><span class="nav-number">1.3.</span> <span class="nav-text">建立本地站点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用github中gitpage搭建网络博客"><span class="nav-number">2.</span> <span class="nav-text">使用github中gitpage搭建网络博客</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将hexo生成的静态博客和gitpage博客关联"><span class="nav-number">3.</span> <span class="nav-text">将hexo生成的静态博客和gitpage博客关联</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义主题"><span class="nav-number">4.</span> <span class="nav-text">自定义主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用自定义域名"><span class="nav-number">5.</span> <span class="nav-text">使用自定义域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo配置文件浅析"><span class="nav-number">6.</span> <span class="nav-text">hexo配置文件浅析</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dymost</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dymostBlogComment"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
