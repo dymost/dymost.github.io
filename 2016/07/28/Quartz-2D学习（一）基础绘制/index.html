@@ -84,37 +84,19 @@
 
 
 
-<meta name="description" content="画一个基本图形步骤
-
-获取图形上下文
-CGContextRef ctr = UIGraphicsGetCurrentContext();
-
-划线，利用线组成图形
-// 创建线CGMutablePathRef path = CGPathCreateMutable();
-CGPathMoveToPoint(path, NULL, 50, 50);CGPathAddLineToPoint(path, N">
+<meta name="description" content="##画一个基本图形步骤
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051521. 获取图形上下文   CGContextRef ctr = UIGraphicsGetCurrentContext();2. 划线，利用线组成图形      // 创建线   CGM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Quartz 2D学习（一）基础绘制">
 <meta property="og:url" content="http://yoursite.com/2016/07/28/Quartz-2D学习（一）基础绘制/index.html">
 <meta property="og:site_name" content="追风的汉子">
-<meta property="og:description" content="画一个基本图形步骤
-
-获取图形上下文
-CGContextRef ctr = UIGraphicsGetCurrentContext();
-
-划线，利用线组成图形
-// 创建线CGMutablePathRef path = CGPathCreateMutable();
-CGPathMoveToPoint(path, NULL, 50, 50);CGPathAddLineToPoint(path, N">
-<meta property="og:updated_time" content="2016-07-28T08:13:45.000Z">
+<meta property="og:description" content="##画一个基本图形步骤
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051521. 获取图形上下文   CGContextRef ctr = UIGraphicsGetCurrentContext();2. 划线，利用线组成图形      // 创建线   CGM">
+<meta property="og:updated_time" content="2016-08-13T06:47:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quartz 2D学习（一）基础绘制">
-<meta name="twitter:description" content="画一个基本图形步骤
-
-获取图形上下文
-CGContextRef ctr = UIGraphicsGetCurrentContext();
-
-划线，利用线组成图形
-// 创建线CGMutablePathRef path = CGPathCreateMutable();
-CGPathMoveToPoint(path, NULL, 50, 50);CGPathAddLineToPoint(path, N">
+<meta name="twitter:description" content="##画一个基本图形步骤
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051521. 获取图形上下文   CGContextRef ctr = UIGraphicsGetCurrentContext();2. 划线，利用线组成图形      // 创建线   CGM">
 
 
 
@@ -353,42 +335,9 @@ CGPathMoveToPoint(path, NULL, 50, 50);CGPathAddLineToPoint(path, N">
       
 
       
-        <p>画一个基本图形步骤</p>
-<ol>
-<li><p>获取图形上下文</p>
-<p>CGContextRef ctr = UIGraphicsGetCurrentContext();</p>
-</li>
-<li><p>划线，利用线组成图形</p>
-<p>// 创建线<br>CGMutablePathRef path = CGPathCreateMutable();</p>
-<p>CGPathMoveToPoint(path, NULL, 50, 50);<br>CGPathAddLineToPoint(path, NULL, 100, 50);<br>CGPathAddLineToPoint(path, NULL, 100, 100);<br>CGPathAddLineToPoint(path, NULL, 100, 100);</p>
-</li>
-<li><p>设置线的样式，图形的样式</p>
-<p> // 线宽<br> CGContextSetLineWidth(ctr, 20);</p>
-<p> // 设置连接样式<br> CGContextSetLineJoin(ctr, kCGLineJoinRound);</p>
-<p> // 设置顶角样式<br> CGContextSetLineCap(ctr, kCGLineCapRound);</p>
-<p> // 设置填充颜色<br> CGContextSetFillColorWithColor(ctr, [[UIColor blueColor] CGColor]);<br> // 设置线的颜色<br> CGContextSetStrokeColorWithColor(ctr, [[UIColor redColor] CGColor]);// 设置线的颜色</p>
-</li>
-</ol>
-<ol>
-<li><p>将路径添加到上下文</p>
-<p> CGContextAddPath(ctr, path);<br>CGContext方式默认添加了路径</p>
-</li>
-<li><p>渲染上下文，将画的东西显示出来</p>
-<p> strock ：画线<br> fill：填充<br> CGContextStrokePath(ctr); //画线<br> CGContextFillPath(ctr); //填充<br> CGContextSetFillColorWithColor(ctr, [[UIColor blueColor] CGColor]);// 设置填充颜色<br> CGContextSetStrokeColorWithColor(ctr, [[UIColor redColor] CGColor]);// 设置线的颜色<br> 同时设置线的样式和内容样式只能用CGContextDrawPath(ctr, CGPathDrawingMode);<br> typedef CF_ENUM (int32_t, CGPathDrawingMode) {</p>
-<pre><code>kCGPathFill, // 填充
-kCGPathEOFill,
-kCGPathStroke,// 画线
-kCGPathFillStroke,// 画线和填充
-kCGPathEOFillStroke
-</code></pre><p> };</p>
-<p>画一个正方形 用CGContextXX画一个正方形</p>
-</li>
-</ol>
-<ul>
-<li><p>(void)drawRect:(CGRect)rect {<br>// 1.获取图形上下文<br>CGContextRef ctr = UIGraphicsGetCurrentContext();<br>CGContextMoveToPoint(ctr, 50, 50);<br>CGContextAddLineToPoint(ctr, 100, 50);<br>CGContextAddLineToPoint(ctr, 100, 100);<br>CGContextAddLineToPoint(ctr, 50, 100);<br>CGContextAddLineToPoint(ctr, 50, 50);</p>
-<p>//    CGContextStrokePath(ctr);<br>CGContextSetLineWidth(ctr, 10);<br>//    CGContextStrokePath(ctr);<br>CGContextSetFillColorWithColor(ctr, [[UIColor blueColor] CGColor]);<br>//    [[UIColor redColor] setFill];<br>CGContextSetStrokeColorWithColor(ctr, [[UIColor redColor] CGColor]);<br>//    CGContextFillPath(ctr);<br>CGContextDrawPath(ctr, kCGPathEOFillStroke);//设置画图样式，划线，还是填充，还是既划线也填充<br>}</p>
-</li>
-</ul>
+        <p>##画一个基本图形步骤</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 获取图形上下文</div><div class="line"></div><div class="line">   <span class="built_in">CGContextRef</span> ctr = <span class="built_in">UIGraphicsGetCurrentContext</span>();</div><div class="line"></div><div class="line"><span class="number">2.</span> 划线，利用线组成图形</div><div class="line">   </div><div class="line">   <span class="comment">// 创建线</span></div><div class="line">   <span class="built_in">CGMutablePathRef</span> path = <span class="built_in">CGPathCreateMutable</span>();</div><div class="line"></div><div class="line">   <span class="built_in">CGPathMoveToPoint</span>(path, <span class="literal">NULL</span>, <span class="number">50</span>, <span class="number">50</span>);</div><div class="line">   <span class="built_in">CGPathAddLineToPoint</span>(path, <span class="literal">NULL</span>, <span class="number">100</span>, <span class="number">50</span>);</div><div class="line">   <span class="built_in">CGPathAddLineToPoint</span>(path, <span class="literal">NULL</span>, <span class="number">100</span>, <span class="number">100</span>);</div><div class="line">   <span class="built_in">CGPathAddLineToPoint</span>(path, <span class="literal">NULL</span>, <span class="number">100</span>, <span class="number">100</span>);</div><div class="line"></div><div class="line"><span class="number">3.</span> 设置线的样式，图形的样式</div><div class="line"></div><div class="line">    <span class="comment">// 线宽</span></div><div class="line">    <span class="built_in">CGContextSetLineWidth</span>(ctr, <span class="number">20</span>);</div><div class="line">    </div><div class="line">    <span class="comment">// 设置连接样式</span></div><div class="line">    <span class="built_in">CGContextSetLineJoin</span>(ctr, kCGLineJoinRound);</div><div class="line">    </div><div class="line">    <span class="comment">// 设置顶角样式</span></div><div class="line">    <span class="built_in">CGContextSetLineCap</span>(ctr, kCGLineCapRound);</div><div class="line"></div><div class="line">    <span class="comment">// 设置填充颜色</span></div><div class="line">    <span class="built_in">CGContextSetFillColorWithColor</span>(ctr, [[<span class="built_in">UIColor</span> blueColor] <span class="built_in">CGColor</span>]);</div><div class="line">    <span class="comment">// 设置线的颜色</span></div><div class="line">    <span class="built_in">CGContextSetStrokeColorWithColor</span>(ctr, [[<span class="built_in">UIColor</span> redColor] <span class="built_in">CGColor</span>]);<span class="comment">// 设置线的颜色</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="number">4.</span> 将路径添加到上下文</div><div class="line"></div><div class="line">    <span class="built_in">CGContextAddPath</span>(ctr, path);</div><div class="line">   <span class="built_in">CGContext</span>方式默认添加了路径</div><div class="line"></div><div class="line"><span class="number">5.</span> 渲染上下文，将画的东西显示出来</div><div class="line"></div><div class="line">    strock ：画线</div><div class="line">    fill：填充</div><div class="line">    <span class="built_in">CGContextStrokePath</span>(ctr); <span class="comment">//画线</span></div><div class="line">    <span class="built_in">CGContextFillPath</span>(ctr); <span class="comment">//填充</span></div><div class="line">    <span class="built_in">CGContextSetFillColorWithColor</span>(ctr, [[<span class="built_in">UIColor</span> blueColor] <span class="built_in">CGColor</span>]);<span class="comment">// 设置填充颜色</span></div><div class="line">    <span class="built_in">CGContextSetStrokeColorWithColor</span>(ctr, [[<span class="built_in">UIColor</span> redColor] <span class="built_in">CGColor</span>]);<span class="comment">// 设置线的颜色</span></div><div class="line">    同时设置线的样式和内容样式只能用<span class="built_in">CGContextDrawPath</span>(ctr, <span class="built_in">CGPathDrawingMode</span>);</div><div class="line">    <span class="keyword">typedef</span> <span class="built_in">CF_ENUM</span> (int32_t, <span class="built_in">CGPathDrawingMode</span>) &#123;</div><div class="line">        kCGPathFill, <span class="comment">// 填充</span></div><div class="line">        kCGPathEOFill,</div><div class="line">        kCGPathStroke,<span class="comment">// 画线</span></div><div class="line">        kCGPathFillStroke,<span class="comment">// 画线和填充</span></div><div class="line">        kCGPathEOFillStroke</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<h2 id="画一个正方形-用CGContextXX画一个正方形"><a href="#画一个正方形-用CGContextXX画一个正方形" class="headerlink" title="画一个正方形 用CGContextXX画一个正方形"></a>画一个正方形 用CGContextXX画一个正方形</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)drawRect:(<span class="built_in">CGRect</span>)rect &#123;</div><div class="line"> <span class="comment">// 1.获取图形上下文</span></div><div class="line"> <span class="built_in">CGContextRef</span> ctr = <span class="built_in">UIGraphicsGetCurrentContext</span>();</div><div class="line"> <span class="built_in">CGContextMoveToPoint</span>(ctr, <span class="number">50</span>, <span class="number">50</span>);</div><div class="line"> <span class="built_in">CGContextAddLineToPoint</span>(ctr, <span class="number">100</span>, <span class="number">50</span>);</div><div class="line"> <span class="built_in">CGContextAddLineToPoint</span>(ctr, <span class="number">100</span>, <span class="number">100</span>);</div><div class="line"> <span class="built_in">CGContextAddLineToPoint</span>(ctr, <span class="number">50</span>, <span class="number">100</span>);</div><div class="line"> <span class="built_in">CGContextAddLineToPoint</span>(ctr, <span class="number">50</span>, <span class="number">50</span>);</div><div class="line"> </div><div class="line"> <span class="comment">//    CGContextStrokePath(ctr);</span></div><div class="line"> <span class="built_in">CGContextSetLineWidth</span>(ctr, <span class="number">10</span>);</div><div class="line"> <span class="comment">//    CGContextStrokePath(ctr);</span></div><div class="line"> <span class="built_in">CGContextSetFillColorWithColor</span>(ctr, [[<span class="built_in">UIColor</span> blueColor] <span class="built_in">CGColor</span>]);</div><div class="line"> <span class="comment">//    [[UIColor redColor] setFill];</span></div><div class="line"> <span class="built_in">CGContextSetStrokeColorWithColor</span>(ctr, [[<span class="built_in">UIColor</span> redColor] <span class="built_in">CGColor</span>]);</div><div class="line"> <span class="comment">//    CGContextFillPath(ctr);</span></div><div class="line"> <span class="built_in">CGContextDrawPath</span>(ctr, kCGPathEOFillStroke);<span class="comment">//设置画图样式，划线，还是填充，还是既划线也填充</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -544,7 +493,7 @@ kCGPathEOFillStroke
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#画一个正方形-用CGContextXX画一个正方形"><span class="nav-number">1.</span> <span class="nav-text">画一个正方形 用CGContextXX画一个正方形</span></a></li></ol></div>
             
           </div>
         </section>
